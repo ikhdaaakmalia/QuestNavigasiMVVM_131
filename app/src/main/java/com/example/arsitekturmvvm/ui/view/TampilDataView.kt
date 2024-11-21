@@ -18,5 +18,19 @@ fun TampilDataView(
     uiState: DataSiswa,
     onBackButton: () -> Unit
 ){
-
+    Column (modifier = Modifier
+        .fillMaxSize()
+        .padding(16.dp))
+    {
+        TampilData(param = "Nama", argum = uiState.nama)
+        TampilData(param = "NIM", argum = uiState.nama)
+        TampilData(param = "Jenis Kelamin", argum = uiState.gender)
+        TampilData(param = "Email", argum = uiState.email)
+        TampilData(param = "Alamat", argum = uiState.alamat)
+        TampilData(param = "No Telepon", argum = uiState.noTelp)
+        Button(onClick = onBackButton, modifier = Modifier.fillMaxWidth()){             //tdk ada {} karena tdk membawa data
+            Text(text = "kembali")
+        }
+    }
 }
+
