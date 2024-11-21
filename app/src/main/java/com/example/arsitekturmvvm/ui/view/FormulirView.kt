@@ -41,6 +41,28 @@ fun FormulirView(
 
     Column (modifier = modifier.fillMaxSize().padding(16.dp), horizontalAlignment = Alignment.CenterHorizontally)
     {
+        TextField(
+            value = nama,
+            onValueChange = {nama = it},                            //memanggil nama sesuai yg di tulis pada Nama (value)
+            label = {
+                Text(text = "Nama")
+            },
+            placeholder = {                                         //unit itu dlm wget maka ditaruhdi dlm kurung kurawal
+                Text(text = "isi nama anda")                        //hint
+            },
+            modifier = Modifier.fillMaxWidth().padding(5.dp)
+        )
+        TextField(
+            value = nim,
+            onValueChange = {nim = it},                            //memanggil nama sesuai yg di tulis pada Nama (value)
+            label = {
+                Text(text = "NIM")
+            },
+            placeholder = {                                         //unit itu dlm wget maka ditaruhdi dlm kurung kurawal
+                Text(text = "isi NIM anda")                        //hint
+            },
+            modifier = Modifier.fillMaxWidth().padding(5.dp)
+        )
 
     }
 }
