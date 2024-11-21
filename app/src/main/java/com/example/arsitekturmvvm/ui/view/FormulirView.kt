@@ -30,5 +30,14 @@ fun FormulirView(
     listJK: List<String>,       //akan dipanggil function formulir view
     onSubmitClicked:(MutableList<String>) -> Unit) //unit untuk menghandel on click/on submit tipe data dlm parameter
 {
+    var nama by remember { mutableStateOf("") }                 //bertipe string karena ada tanda petik, jika int maka berisi angka
+    var nim by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }                //variabel harus lowercase
+    var alamat by remember { mutableStateOf("") }
+    var noTelp by remember { mutableStateOf("") }
+    var gender by remember { mutableStateOf("") }
+
+    val listData : MutableList<String> = mutableListOf(nama, nim, gender,email, alamat, noTelp)
+
 
 }
