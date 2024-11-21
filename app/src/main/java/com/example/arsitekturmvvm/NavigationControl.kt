@@ -29,5 +29,31 @@ fun NavigationControl(
     // navController: NavHostController = rememberNavController(),          //yg mengatur nav
     navHost: NavHostController = rememberNavController()
 ){
+    val uiState by viewModel.statusUI.collectAsState()
 
+    NavHost(                            //pilih yg start destination
+        navController = navHost,
+        startDestination = Halaman.FORMULIR.name
+    ) {
+        composable(                 //pilih yg route pertama
+            route = Halaman.FORMULIR.name
+        ) {
+            val konteks = LocalContext.current
+            FormulirView(
+                listJK = jenisK.map { id ->
+                    konteks.getString(id)
+                },
+                onSubmitClicked = {
+                    viewModel.saveDataSiswa(it)
+                    navHost.navigate(Halaman.TAMPILDATA.name)
+                }
+            )
+
+        }
+        composable(route = Halaman.TAMPILDATA.name){
+            TampilDataView(uiState = uiState, onBackButton =  {
+                navHost.popBackStack()
+            })
+        }
+    }
 }
