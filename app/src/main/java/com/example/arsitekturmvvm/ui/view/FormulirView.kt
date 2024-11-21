@@ -63,6 +63,16 @@ fun FormulirView(
             },
             modifier = Modifier.fillMaxWidth().padding(5.dp)
         )
+        Row (modifier = modifier.fillMaxWidth(), horizontalArrangement = Arrangement.Center){                       //looping untuk radio gender
+            listJK.forEach{selectedGender ->
+                Row(verticalAlignment = Alignment.CenterVertically){
+                    RadioButton(
+                        selected = gender == selectedGender,
+                        onClick = {gender = selectedGender}
+                    )
+                    Text(text = selectedGender)}
+            }
+        }
 
     }
 }
