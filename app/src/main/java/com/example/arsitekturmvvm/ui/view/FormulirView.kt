@@ -39,5 +39,8 @@ fun FormulirView(
 
     val listData : MutableList<String> = mutableListOf(nama, nim, gender,email, alamat, noTelp)
 
+    Column (modifier = modifier.fillMaxSize().padding(16.dp), horizontalAlignment = Alignment.CenterHorizontally)
+    {
 
+    }
 }
