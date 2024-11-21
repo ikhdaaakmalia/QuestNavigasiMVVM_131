@@ -34,3 +34,25 @@ fun TampilDataView(
     }
 }
 
+@Composable
+fun TampilData(
+    param : String, argum: String                                                   //bikin parameter untuk mempermudah memanggil semuanya
+){
+    Column (modifier = Modifier.padding(16.dp))
+    {
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Text(
+                text = param,
+                modifier = Modifier.weight(0.8f))                                    //weight memberi ruang seberapa banyak kpd elemen
+            Text(
+                text = ":",
+                modifier = Modifier.weight(0.2f))
+            Text(
+                text = argum,
+                modifier = Modifier.weight(2f))
+        }
+    }
+}
