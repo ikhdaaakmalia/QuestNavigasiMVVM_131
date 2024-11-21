@@ -106,6 +106,11 @@ fun FormulirView(
             },
             modifier = Modifier.fillMaxWidth().padding(5.dp), keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
         )
+        Button(onClick = {                                          //button kliknya untuk mengirim event dari view ke model
+            onSubmitClicked(listData)                           //mewakili on click
 
+        }){
+            Text(text = "Simpan")                                   //conf = biar datanya tampil setelah di pencet button (simpan) nya
+        }
     }
 }
