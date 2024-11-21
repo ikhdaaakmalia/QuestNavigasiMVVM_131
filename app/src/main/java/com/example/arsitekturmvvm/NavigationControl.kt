@@ -22,3 +22,12 @@ enum class Halaman {                                     //menandai nama per hal
     TAMPILDATA
 }
 
+@Composable
+fun NavigationControl(
+    modifier: Modifier = Modifier,
+    viewModel: SiswaViewModel = viewModel(),
+    // navController: NavHostController = rememberNavController(),          //yg mengatur nav
+    navHost: NavHostController = rememberNavController()
+){
+
+}
