@@ -73,6 +73,39 @@ fun FormulirView(
                     Text(text = selectedGender)}
             }
         }
+        TextField(
+            value = email,
+            onValueChange = {email = it},                            // it = memanggil Email sesuai yg di tulis pada Email(value)
+            label = {
+                Text(text = "Email")
+            },
+            placeholder = {                                         //unit itu dlm wget maka ditaruhdi dlm kurung kurawal
+                Text(text = "isi email anda")                        //hint
+            },
+            modifier = Modifier.fillMaxWidth().padding(5.dp), keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email)
+        )
+        TextField(
+            value = alamat,
+            onValueChange = {alamat = it},                            //it = memanggil Alamat sesuai yg di tulis pada Alamat(value)
+            label = {
+                Text(text = "Alamat")
+            },
+            placeholder = {                                         //unit itu dlm wget maka ditaruhdi dlm kurung kurawal
+                Text(text = "isi alamat anda")                        //hint
+            },
+            modifier = Modifier.fillMaxWidth().padding(5.dp)
+        )
+        TextField(
+            value = noTelp,
+            onValueChange = {noTelp = it},                            //it = memanggil NoTelp sesuai yg di tulis pada NoTelp(value)
+            label = {
+                Text(text = "NoTelp")
+            },
+            placeholder = {                                         //unit itu dlm wget maka ditaruhdi dlm kurung kurawal
+                Text(text = "isi NoTelp anda")                       //hint
+            },
+            modifier = Modifier.fillMaxWidth().padding(5.dp), keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
+        )
 
     }
 }
