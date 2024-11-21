@@ -23,7 +23,7 @@ fun TampilDataView(
         .padding(16.dp))
     {
         TampilData(param = "Nama", argum = uiState.nama)
-        TampilData(param = "NIM", argum = uiState.nama)
+        TampilData(param = "NIM", argum = uiState.nim)
         TampilData(param = "Jenis Kelamin", argum = uiState.gender)
         TampilData(param = "Email", argum = uiState.email)
         TampilData(param = "Alamat", argum = uiState.alamat)

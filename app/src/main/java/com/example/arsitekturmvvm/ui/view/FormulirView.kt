@@ -54,7 +54,7 @@ fun FormulirView(
         )
         TextField(
             value = nim,
-            onValueChange = {nim = it},                            //memanggil nama sesuai yg di tulis pada Nama (value)
+            onValueChange = {nim = it},                            //memanggil nim sesuai yg di tulis pada Nama (value)
             label = {
                 Text(text = "NIM")
             },
